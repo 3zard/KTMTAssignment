@@ -2,7 +2,7 @@ import struct
 
 # Ví dụ hai số thực (có thể thay đổi theo yêu cầu của bạn)
 number1 = 1.5
-number2 = -2.75
+number2 = 2.75
 
 # Mở và tạo file nhị phân FLOAT2.BIN
 with open('FLOAT2.BIN', 'wb') as file:
