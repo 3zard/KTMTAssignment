@@ -14,6 +14,7 @@ xuat_f1: .asciiz "So thuc thu nhat la: "
 xuat_f2: .asciiz "So thuc thu hai la: "
 xuat_ket_qua: .asciiz "Tong hai so thuc la: "
 line_break: .asciiz "/n"
+str_loi: .asciiz "Sai"
 #Code segment
 	.text
 main:
@@ -25,6 +26,9 @@ main:
 	syscall				# Thực hiện syscall mở file
 	bgez $v0, tiep
 bao_loi:
+	la $a0, str_loi
+	addi $v0, $zero, 4
+	syscall
 	j Kthuc
 tiep:	sw $v0, fdescr			# Lưu file descriptor
 #Đọc file
