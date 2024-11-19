@@ -8,3 +8,5 @@ number2 = 2.75
 with open('FLOAT2.BIN', 'wb') as file:
     # Ghi hai số float (4 byte mỗi số) vào file nhị phân
     file.write(struct.pack('ff', number1, number2))
+
+print("File FLOAT2.BIN đã được tạo thành công và ghi dữ liệu.")
